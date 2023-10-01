@@ -1,10 +1,9 @@
-[int]$num = read-host "Introduce hasta que numero"
+[int]$num = Read-Host "Introduzca el numero?"
 
-for ($a = 1; $a -le $num ; $a++)
+for ( $i=1; $i -le $num; $i++ ) {
+Write-Host ""$esc=$i*2-1
 
-{
-
-
-write-host ($a = +2)
-
-}
+    for ( $j=1;$j -le $i; $j++ ){
+    write-host -NoNewline "$esc "$esc -=2}
+    }
+    
