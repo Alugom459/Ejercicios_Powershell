@@ -4,6 +4,6 @@ if  ($num = [int]$num) {
 
 for ($i = 1; $i -le $num; $i++) {
 
-Write-host ("*" * "$i") }
+Write-host ("1" * "$i") }
 }
 
