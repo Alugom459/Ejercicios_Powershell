@@ -1,4 +1,4 @@
-Import-Module ActiveDirectory
+
 
 New-ADOrganizationalUnit -Name "EMPRESA" -Path "DC=EMPRESA,DC=LOCAL"
 
