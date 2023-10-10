@@ -1,5 +1,4 @@
 
-
 New-ADOrganizationalUnit -Name "EMPRESA" -Path "DC=EMPRESA,DC=LOCAL"
 
 $departament = Import-Csv -Path C:\Users\Administrador\Desktop\archivos\departamentos.csv -Delimiter ';'
@@ -21,7 +20,7 @@ $Departamento = $user.departamento
 $nombre = $user.nombre
 $apellido = $user.apellido
  
-New-ADUser -Name "$nombre.$apellido" -GivenName $nombre -Surname $apellido -Path "OU=$Departamento,OU=EMPRESA,DC=EMPRESA,DC=LOCAL" -AccountPassword (ConvertTo-SecureString -AsPlainText "aso2021." -Force) -ChangePasswordAtLogon $true
+New-ADUser -Name "$nombre.$apellido" -GivenName $nombre -Surname $apellido -Path "OU=$Departamento,OU=EMPRESA,DC=EMPRESA,DC=LOCAL" -AccountPassword (ConvertTo-SecureString -AsPlainText "aso2021." -Force) -ChangePasswordAtLogon $true -Enabled $true
 
 
 Add-ADGroupMember -identity $Departamento -Members "$nombre.$apellido"
